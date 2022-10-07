@@ -9,13 +9,12 @@ function increaseCookieCounter() {
     countElement.textContent = counter
     if (counter > record) {
         record = counter
-        recordElement.textContent = "Record: " + record
+        recordElement.textContent = record
     }
 }
 
 function saveCounter() {
-    saveElement.textContent = "Previous result:"
-    saveElement.textContent += " " + counter
+    saveElement.textContent = counter
     countElement.textContent = "0"
     counter = 0;
 }

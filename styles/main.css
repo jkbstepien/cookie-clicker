@@ -4,44 +4,91 @@
 }
 
 body {
+    font-family: "Cookies", serif;
+    font-weight: bold;
+    font-size: 2rem;
+    text-align: center;
+    color: whitesmoke;
+    text-shadow: 2px 2px #000000;
+    margin: 0;
     background: url("../images/cookie-background.jpg") no-repeat center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    font-family: "Cookies", serif;
-    font-weight: bold;
-    font-size: 32px;
-    text-align: center;
+}
+
+.container {
+    width: 90%;
+    max-width: 570px;
+    margin: 0 auto;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+h1,
+h2 {
+    margin: 0;
+}
+
+p {
+    margin: 0.5em;
 }
 
 #clicks-counter {
-    font-size: 50px;
+    font-size: 4rem;
 }
 
-.btn-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
+/*.btn-container {*/
+/*    display: flex;*/
+/*    justify-content: center;*/
+/*    align-items: center;*/
+/*}*/
 
 button {
-    width: 200px;
+    width: 150px;
     border: none;
     border-radius: 12px;
     padding: 10px 0;
-    margin: 5px 0;
-    font-size: 24px;
-    font-weight: bold;
+    margin: 0 0 0.5em 0;
+    font-size: 1.5rem;
+    font-weight: bolder;
+}
+
+#increase-cookie,
+#save-cookie-counter {
+    font-family: inherit;
+    color: whitesmoke;
 }
 
 #increase-cookie {
     background: #905532;
-    color: whitesmoke;
 }
 
 #save-cookie-counter {
     background: #50271A;
-    color: whitesmoke;
+}
+
+@media (min-width: 600px) {
+    .btn-container.flex-container {
+        flex-direction: column;
+    }
+
+    .flex-container {
+        flex-direction: row;
+    }
+
+    h2 {
+        margin-top: 0.5em;
+    }
+
+    p {
+        margin-left: 2em;
+        margin-top: 0;
+    }
 }
